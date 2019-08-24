@@ -272,7 +272,7 @@ s.Name = "SpeedValue"
 		end
 	end)
 login.MouseButton1Click:Connect(function()
-repeat wait() until game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Username.Text == "coachella2019wasawful" and game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Password.Text == "loganpaulisgay"
+repeat wait() until game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Username.Text == "hub" and game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Password.Text == "hack"
 game.Players.LocalPlayer.PlayerGui.ScriptHub.Login:Destroy()
 end)
 repeat wait() until not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")
