@@ -18,6 +18,7 @@ local Username = Instance.new("TextBox")
 local Password = Instance.new("TextBox")
 local login = Instance.new("TextButton")
 local speed = Instance.new("TextBox")
+local mouse = game.Players.LocalPlayer:GetMouse()
 
 ScriptHub.Name = "ScriptHub"
 ScriptHub.Parent = game.Players.LocalPlayer.PlayerGui
@@ -87,6 +88,8 @@ streets_tab.BorderSizePixel = 0
 streets_tab.Position = UDim2.new(0.145019919, 0, 0.428571433, 0)
 streets_tab.Size = UDim2.new(0, 347, 0, 334)
 streets_tab.Visible = false
+streets_tab.Active = true
+streets_tab.Draggable = true
 
 
 SetSpeed.Name = "SetSpeed"
@@ -164,7 +167,20 @@ prison_tab.Position = UDim2.new(0.478884459, 0, 0.362997651, 0)
 prison_tab.Size = UDim2.new(0, 347, 0, 334)
 prison_tab.Visible = false
 prison_tab_Draggable = true
-prison_tab.Selectable = true
+prison_tab.Active = true
+
+local UIS = game:GetService("UserInputService")
+local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.prison_tab
+
+UIS.InputBegan:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
+        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
+            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
+        else --Is closed
+            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
+        end
+    end
+end)
 
 killaura.Name = "killaura"
 killaura.Parent = prison_tab
@@ -332,9 +348,8 @@ end)
 end)
 end)
 end
-	repeat wait() until not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")
+		repeat wait() until not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")
 	if game.ReplicatedStorage:FindFirstChild("defGui") then
-	game:GetService("RunService").RenderStepped:Connect(function()
 	prison_tab.Visible = true
 	game.Players.LocalPlayer.PlayerGui.ScriptHub["prison_tab"].Visible = true
 		Value.FocusLost:Connect(function(enterPressed)
@@ -343,6 +358,9 @@ end
 		
 			end
 		end)
+
+
+
 		kickscript.MouseButton1Click:Connect(function()
 
 		end)
@@ -357,8 +375,31 @@ end
 			s.BinType = "Grab"
 			s.Parent = game.Players.LocalPlayer.Backpack
 		end)
-		end)
 		end
+
+		local active = true
+		killaura.MouseButton1Click:Connect(function()
+		if active == false then 
+			active = true
+			elseif active == true then 
+				active = false
+		    while wait() do
+				if active == true then
+		for i,v in pairs(game.Players:GetPlayers()) do 
+    	if v.Name ~= game.Players.LocalPlayer.Name then
+		local tbl_main = 
+{
+     v
+}
+game:GetService("ReplicatedStorage").meleeEvent:FireServer(unpack(tbl_main))
+		end
+				end
+			end
+		end
+		end
+		end)
+
+
 		
 
 if game.Players.LocalPlayer:IsFriendsWith(1214619951) then
