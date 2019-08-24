@@ -79,7 +79,17 @@ login.TextScaled = true
 login.TextSize = 14
 login.TextWrapped = true
 
-	
+
+
+streets_tab.Name = "streets_tab"
+streets_tab.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
+streets_tab.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
+streets_tab.BorderSizePixel = 0
+streets_tab.Position = UDim2.new(0.145019919, 0, 0.428571433, 0)
+streets_tab.Size = UDim2.new(0, 347, 0, 334)
+streets_tab.Visible = false
+streets_tab.Active = true
+streets_tab.Draggable = true
 
 local UIS = game:GetService("UserInputService")
 local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.streets_tab
@@ -93,16 +103,6 @@ UIS.InputBegan:Connect(function(Input)
         end
     end
 end)
-
-streets_tab.Name = "streets_tab"
-streets_tab.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
-streets_tab.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
-streets_tab.BorderSizePixel = 0
-streets_tab.Position = UDim2.new(0.145019919, 0, 0.428571433, 0)
-streets_tab.Size = UDim2.new(0, 347, 0, 334)
-streets_tab.Visible = false
-streets_tab.Active = true
-streets_tab.Draggable = true
 
 
 SetSpeed.Name = "SetSpeed"
