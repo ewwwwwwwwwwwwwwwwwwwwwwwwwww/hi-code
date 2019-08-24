@@ -81,6 +81,19 @@ login.TextWrapped = true
 
 	
 
+local UIS = game:GetService("UserInputService")
+local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.streets_tab
+
+UIS.InputBegan:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
+        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
+            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
+        else --Is closed
+            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
+        end
+    end
+end)
+
 streets_tab.Name = "streets_tab"
 streets_tab.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
 streets_tab.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
