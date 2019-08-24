@@ -1,0 +1,368 @@
+local ScriptHub = Instance.new("ScreenGui")
+local streets_tab = Instance.new("Frame")
+local SetSpeed = Instance.new("TextButton")
+local bar = Instance.new("TextLabel")
+local AntiCheat = Instance.new("TextButton")
+local Value = Instance.new("TextBox")
+local BlockNoclip = Instance.new("TextButton")
+local prison_tab = Instance.new("Frame")
+local killaura = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local kickscript = Instance.new("TextButton")
+local Value = Instance.new("TextBox")
+local crashscript = Instance.new("TextButton")
+local btools = Instance.new("TextButton")
+local Login = Instance.new("Frame")
+local topbar = Instance.new("TextLabel")
+local Username = Instance.new("TextBox")
+local Password = Instance.new("TextBox")
+local login = Instance.new("TextButton")
+local speed = Instance.new("TextBox")
+
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = game.Players.LocalPlayer.PlayerGui
+ScriptHub.ResetOnSpawn = false
+ScriptHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+Login.Name = "Login"
+Login.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
+Login.BackgroundColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+Login.Position = UDim2.new(0.141025499, 0, 0.2453897, 0)
+Login.Selectable = true
+Login.Size = UDim2.new(0, 900, 0, 433)
+
+
+topbar.Name = "topbar"
+topbar.Parent = Login
+topbar.BackgroundColor3 = Color3.new(0.639216, 0.639216, 0.639216)
+topbar.BorderSizePixel = 0
+topbar.Size = UDim2.new(0, 900, 0, 50)
+topbar.Font = Enum.Font.SourceSans
+topbar.Text = "Enter Username and Password to continue"
+topbar.TextColor3 = Color3.new(0, 0, 0)
+topbar.TextSize = 20
+
+
+Username.Name = "Username"
+Username.Parent = Login
+Username.BackgroundColor3 = Color3.new(0.639216, 0.639216, 0.639216)
+Username.Position = UDim2.new(0.247777775, 0, 0.277136266, 0)
+Username.Size = UDim2.new(0, 454, 0, 50)
+Username.Font = Enum.Font.SourceSansBold
+Username.Text = "Enter Username here"
+Username.TextColor3 = Color3.new(0, 0, 0)
+Username.TextSize = 20
+
+
+Password.Name = "Password"
+Password.Parent = Login
+Password.BackgroundColor3 = Color3.new(0.639216, 0.639216, 0.639216)
+Password.Position = UDim2.new(0.247777775, 0, 0.554272532, 0)
+Password.Size = UDim2.new(0, 454, 0, 50)
+Password.Font = Enum.Font.SourceSansBold
+Password.Text = "Enter Password here"
+Password.TextColor3 = Color3.new(0, 0, 0)
+Password.TextSize = 23
+
+
+login.Name = "Login"
+login.Parent = Login
+login.BackgroundColor3 = Color3.new(0.639216, 0.639216, 0.639216)
+login.Position = UDim2.new(0.388888896, 0, 0.796766758, 0)
+login.Size = UDim2.new(0, 200, 0, 50)
+login.Font = Enum.Font.SourceSansBold
+login.Text = "Log in"
+login.TextColor3 = Color3.new(0, 0, 0)
+login.TextScaled = true
+login.TextSize = 14
+login.TextWrapped = true
+
+	
+
+streets_tab.Name = "streets_tab"
+streets_tab.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
+streets_tab.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
+streets_tab.BorderSizePixel = 0
+streets_tab.Position = UDim2.new(0.145019919, 0, 0.428571433, 0)
+streets_tab.Size = UDim2.new(0, 347, 0, 334)
+streets_tab.Visible = false
+
+
+SetSpeed.Name = "SetSpeed"
+SetSpeed.Parent = streets_tab
+SetSpeed.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+SetSpeed.Position = UDim2.new(0.230547547, 0, 0.553892255, 0)
+SetSpeed.Size = UDim2.new(0, 187, 0, 50)
+SetSpeed.Font = Enum.Font.SourceSansBold
+SetSpeed.Text = "Set Speed"
+SetSpeed.TextColor3 = Color3.new(1, 1, 1)
+SetSpeed.TextScaled = true
+SetSpeed.TextSize = 14
+SetSpeed.TextWrapped = true
+
+
+bar.Name = "bar"
+bar.Parent = streets_tab
+bar.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+bar.BorderSizePixel = 0
+bar.Size = UDim2.new(0, 347, 0, 50)
+bar.Font = Enum.Font.SourceSansBold
+bar.Text = "The Streets (Beta)"
+bar.TextColor3 = Color3.new(1, 1, 1)
+bar.TextScaled = true
+bar.TextSize = 14
+bar.TextWrapped = true
+
+
+AntiCheat.Name = "AntiCheat"
+AntiCheat.Parent = streets_tab
+AntiCheat.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+AntiCheat.Position = UDim2.new(0.230547547, 0, 0.17964077, 0)
+AntiCheat.Size = UDim2.new(0, 187, 0, 50)
+AntiCheat.Font = Enum.Font.SourceSansBold
+AntiCheat.Text = "Anti-Cheat (must run)"
+AntiCheat.TextColor3 = Color3.new(1, 1, 1)
+AntiCheat.TextScaled = true
+AntiCheat.TextSize = 14
+AntiCheat.TextWrapped = true
+
+
+
+
+BlockNoclip.Name = "BlockNoclip"
+BlockNoclip.Parent = streets_tab
+BlockNoclip.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+BlockNoclip.Position = UDim2.new(0.230547547, 0, 0.368263543, 0)
+BlockNoclip.Size = UDim2.new(0, 187, 0, 50)
+BlockNoclip.Font = Enum.Font.SourceSansBold
+BlockNoclip.Text = "Block Noclip."
+BlockNoclip.TextColor3 = Color3.new(1, 1, 1)
+BlockNoclip.TextScaled = true
+BlockNoclip.TextSize = 14
+BlockNoclip.TextWrapped = true
+
+
+speed.Name = "speed"
+speed.Parent = streets_tab
+speed.BackgroundColor3 = Color3.new(0.168627, 0.168627, 0.168627)
+speed.Position = UDim2.new(0.230547547, 0, 0.733532965, 0)
+speed.Size = UDim2.new(0, 187, 0, 50)
+speed.Font = Enum.Font.SourceSansBold
+speed.Text = "Speed value"
+speed.TextColor3 = Color3.new(1, 1, 1)
+speed.TextScaled = true
+speed.TextSize = 14
+speed.TextWrapped = true
+
+
+prison_tab.Name = "prison_tab"
+prison_tab.Parent = game.Players.LocalPlayer.PlayerGui.ScriptHub
+prison_tab.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
+prison_tab.BorderSizePixel = 0
+prison_tab.Position = UDim2.new(0.478884459, 0, 0.362997651, 0)
+prison_tab.Size = UDim2.new(0, 347, 0, 334)
+prison_tab.Visible = false
+prison_tab_Draggable = true
+prison_tab.Selectable = true
+
+killaura.Name = "killaura"
+killaura.Parent = prison_tab
+killaura.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+killaura.Position = UDim2.new(0.031700287, 0, 0.57185626, 0)
+killaura.Size = UDim2.new(0, 144, 0, 50)
+killaura.Font = Enum.Font.SourceSansBold
+killaura.Text = "Kill Aura"
+killaura.TextColor3 = Color3.new(1, 1, 1)
+killaura.TextScaled = true
+killaura.TextSize = 14
+killaura.TextWrapped = true
+
+TextLabel.Parent = prison_tab
+TextLabel.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 347, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Prison Life (Beta)"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+kickscript.Name = "Kill (need gun)"
+kickscript.Parent = prison_tab
+kickscript.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+kickscript.Position = UDim2.new(0.230547547, 0, 0.17964077, 0)
+kickscript.Size = UDim2.new(0, 187, 0, 50)
+kickscript.Font = Enum.Font.SourceSansBold
+kickscript.Text = "Kick"
+kickscript.TextColor3 = Color3.new(1, 1, 1)
+kickscript.TextScaled = true
+kickscript.TextSize = 14
+kickscript.TextWrapped = true
+
+Value.Name = "Value"
+Value.Parent = prison_tab
+Value.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Value.BorderSizePixel = 0
+Value.Position = UDim2.new(0.230547577, 0, 0.766467035, 0)
+Value.Size = UDim2.new(0, 187, 0, 50)
+Value.Font = Enum.Font.SourceSansBold
+Value.PlaceholderColor3 = Color3.new(1, 1, 1)
+Value.Text = "Player"
+Value.TextColor3 = Color3.new(1, 1, 1)
+Value.TextScaled = true
+Value.TextSize = 14
+Value.TextWrapped = true
+
+crashscript.Name = "crashscript"
+crashscript.Parent = prison_tab
+crashscript.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+crashscript.Position = UDim2.new(0.230547547, 0, 0.368263543, 0)
+crashscript.Size = UDim2.new(0, 187, 0, 50)
+crashscript.Font = Enum.Font.SourceSansBold
+crashscript.Text = "Crash Script (takes a while)"
+crashscript.TextColor3 = Color3.new(1, 1, 1)
+crashscript.TextScaled = true
+crashscript.TextSize = 14
+crashscript.TextWrapped = true
+
+btools.Name = "btools"
+btools.Parent = prison_tab
+btools.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+btools.Position = UDim2.new(0.533141255, 0, 0.57185626, 0)
+btools.Size = UDim2.new(0, 144, 0, 50)
+btools.Font = Enum.Font.SourceSansBold
+btools.Text = "BTools (Client-Sided)"
+btools.TextColor3 = Color3.new(1, 1, 1)
+btools.TextScaled = true
+btools.TextSize = 14
+btools.TextWrapped = true
+
+
+
+--Values
+local f = Instance.new("StringValue")
+f.Parent = ScriptHub
+f.Name = "Username"
+
+local l = Instance.new("StringValue")
+l.Parent = ScriptHub
+l.Name = "Password"
+l.Value = ""
+
+local e = Instance.new("StringValue")
+e.Parent = ScriptHub
+e.Name = "Kickvalue"
+
+local s = Instance.new("StringValue")
+s.Parent = ScriptHub
+s.Name = "SpeedValue"
+--Scripts
+
+	game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Username.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			game.Players.LocalPlayer.PlayerGui.ScriptHub.Username.Value = game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Username.Text
+		end
+	end)
+
+	game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Password.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			game.Players.LocalPlayer.PlayerGui.ScriptHub.Password.Value = game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Password.Text
+		end
+	end)
+login.MouseButton1Click:Connect(function()
+repeat wait() until game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Username.Text == "coachella2019wasawful" and game.Players.LocalPlayer.PlayerGui.ScriptHub.Login.Password.Text == "loganpaulisgay"
+game.Players.LocalPlayer.PlayerGui.ScriptHub.Login:Destroy()
+end)
+repeat wait() until not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")
+if not game.ReplicatedStorage:FindFirstChild("defGui") and not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")then
+streets_tab.Visible = true
+local mt = getrawmetatable(game)
+local index = mt.__index
+setreadonly(mt,false)
+mt.__index = function(t,k)
+if k == "WalkSpeed" and not checkcaller() then 
+return"no"
+end
+return index(t,k)
+end
+
+speed.FocusLost:Connect(function(enterPressed)
+	if enterPressed then
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed.Text
+	end
+end)
+
+BlockNoclip.MouseButton1Click:Connect(function()
+	
+local mouse = game.Players.LocalPlayer:GetMouse()  
+mouse.KeyDown:Connect(function(key)
+if key == "f" then 
+    if mouse.Target.CanCollide == false then
+    mouse.Target.CanCollide = true
+        else
+        mouse.Target.CanCollide = false
+if mouse.Target:IsA("Model") then 
+for i,v in pairs(mouse.Target:GetDescendants()) do 
+        if v.CanCollode == false then
+        v.CanCollide = true
+        else
+        v.CanCollide = false
+    end
+end
+    end
+end
+end
+end)
+
+
+AntiCheat.MouseButton1Click:Connect(function()
+local mt = getrawmetatable(game)
+local f = mt.__namecall
+local value
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(...)
+local args = {...}
+if args[#args] == "Kick" then 
+    return"no"
+end
+return f(...)
+end)
+end)
+end)
+end
+	repeat wait() until not game.Players.LocalPlayer.PlayerGui.ScriptHub:FindFirstChild("Login")
+	if game.ReplicatedStorage:FindFirstChild("defGui") then
+	game:GetService("RunService").RenderStepped:Connect(function()
+	prison_tab.Visible = true
+	game.Players.LocalPlayer.PlayerGui.ScriptHub["prison_tab"].Visible = true
+		Value.FocusLost:Connect(function(enterPressed)
+			if enterPressed then
+			e.Value = Value.Text
+		
+			end
+		end)
+		kickscript.MouseButton1Click:Connect(function()
+
+		end)
+		btools.MouseButton1Click:Connect(function()
+			local f = Instance.new("HopperBin")
+			f.BinType = "Hammer"
+			f.Parent = game.Players.LocalPlayer.Backpack
+			local e = Instance.new("HopperBin")
+			e.BinType = "GameTool"
+			e.Parent = game.Players.LocalPlayer.Backpack
+			local s = Instance.new("HopperBin")
+			s.BinType = "Grab"
+			s.Parent = game.Players.LocalPlayer.Backpack
+		end)
+		end)
+		end
+		
+
+if game.Players.LocalPlayer:IsFriendsWith(1214619951) then
+	print'hi';
+else
+	game.Players.LocalPlayer:Kick("nope")
+end
