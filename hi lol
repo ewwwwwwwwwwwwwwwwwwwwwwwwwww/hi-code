@@ -91,19 +91,6 @@ streets_tab.Visible = false
 streets_tab.Active = true
 streets_tab.Draggable = true
 
-local UIS = game:GetService("UserInputService")
-local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.streets_tab
-
-UIS.InputBegan:Connect(function(Input)
-    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
-        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
-            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
-        else --Is closed
-            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
-        end
-    end
-end)
-
 
 SetSpeed.Name = "SetSpeed"
 SetSpeed.Parent = streets_tab
@@ -181,19 +168,6 @@ prison_tab.Size = UDim2.new(0, 347, 0, 334)
 prison_tab.Visible = false
 prison_tab_Draggable = true
 prison_tab.Active = true
-
-local UIS = game:GetService("UserInputService")
-local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.prison_tab
-
-UIS.InputBegan:Connect(function(Input)
-    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
-        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
-            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
-        else --Is closed
-            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
-        end
-    end
-end)
 
 killaura.Name = "killaura"
 killaura.Parent = prison_tab
@@ -411,6 +385,36 @@ game:GetService("ReplicatedStorage").meleeEvent:FireServer(unpack(tbl_main))
 		end
 		end
 		end)
+		
+		local UIS = game:GetService("UserInputService")
+local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.streets_tab
+
+UIS.InputBegan:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
+        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
+            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
+        else --Is closed
+            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
+        end
+    end
+end)
+
+
+local UIS = game:GetService("UserInputService")
+local gui = game.Players.LocalPlayer.PlayerGui.ScriptHub.prison_tab
+
+UIS.InputBegan:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.Keyboard and Input.KeyCode == Enum.KeyCode.Q then
+        if gui.Position == UDim2.new(0.382, 0, 0.229, 0) then
+            gui:TweenPosition(UDim2.new(0.382, 0, 1.229, 0))
+        else --Is closed
+            gui:TweenPosition(UDim2.new(0.382, 0, 0.229, 0))
+        end
+    end
+end)
+
+
+
 
 
 		
